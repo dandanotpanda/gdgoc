@@ -29,10 +29,10 @@ Integrated endpoints include:
 
 ## Getting Started
 
-Clone the repository: https://github.com/dandanotpanda/gdgoc.git
+Clone the repository: 
 
 ```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+https://github.com/dandanotpanda/gdgoc.git
 ```
 
 Install dependencies:
