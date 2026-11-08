@@ -1,4 +1,7 @@
 import { NavLink } from 'react-router-dom'
+import logoImg from '../assets/logo.png'
+import instagramImg from '../assets/Instagram.png'
+import youtubeImg from '../assets/youtube.png'
 
 function Footer() {
   return (
@@ -11,7 +14,7 @@ function Footer() {
             <div className="flex items-center gap-3">
               
               <img 
-                src="src/assets/logo.png" 
+                src={logoImg} 
                 alt="GDGoC Logo" 
                 className="h-8 w-auto object-contain" 
               />
@@ -45,11 +48,11 @@ function Footer() {
               
              <div className="mt-1 flex items-center gap-4">
   <a href="#" className="flex h-5 w-5 items-center justify-center opacity-60 transition hover:opacity-100">
-    <img src="/src/assets/Instagram.png" alt="Instagram" className="h-full w-full object-contain" />
+    <img src={instagramImg} alt="Instagram" className="h-full w-full object-contain" />
   </a>
 
   <a href="#" className="flex h-5 w-5 items-center justify-center opacity-60 transition hover:opacity-100">
-    <img src="/src/assets/youtube.png" alt="YouTube" className="h-full w-full object-contain" />
+    <img src={youtubeImg} alt="YouTube" className="h-full w-full object-contain" />
   </a>
 </div>
 

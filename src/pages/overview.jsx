@@ -1,4 +1,13 @@
 import { useEffect, useState } from "react";
+import overviewImg from "../assets/overview.png";
+import researchImg from "../assets/research.png";
+import designImg from "../assets/design.png";
+import developmentImg from "../assets/development.png";
+import iconStudyImg from "../assets/icon study.png";
+import iconHandsOnImg from "../assets/icon hands on.png";
+import iconShareImg from "../assets/icon share.png";
+import knowImg from "../assets/know.png";
+
 function Overview() {
   const [tracks, setTracks] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -101,7 +110,7 @@ useEffect(() => {
       <div className="flex justify-center">
 
     <img
-      src="src/assets/overview.png"
+      src={overviewImg}
             alt="GDGoC UGM illustration"
             className="h-auto w-full max-w-[620px] rounded-2xl object-contain"
     />
@@ -144,7 +153,7 @@ useEffect(() => {
 <div className="flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white">
   <div className="relative z-10 aspect-[400/232] w-full shrink-0 rounded-t-2xl bg-blue-50">
     <img
-      src="/src/assets/research.png"
+      src={researchImg}
       alt="Research and discovery"
       className="absolute left-0 top-0 z-20 h-auto w-full object-contain"
     />
@@ -174,7 +183,7 @@ useEffect(() => {
 <div className="flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white">
   <div className="relative z-10 aspect-[400/232] w-full shrink-0 rounded-t-2xl bg-amber-50">
     <img
-      src="/src/assets/design.png"
+      src={designImg}
       alt="Design and creativity"
       className="absolute left-0 top-0 z-20 h-auto w-full object-contain"
     />
@@ -204,7 +213,7 @@ useEffect(() => {
 <div className="flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white">
   <div className="relative z-10 aspect-[400/232] w-full shrink-0 rounded-t-2xl bg-green-50">
     <img
-      src="/src/assets/development.png"
+      src={developmentImg}
       alt="Development"
       className="absolute left-0 top-0 z-20 h-auto w-full object-contain"
     />
@@ -302,7 +311,7 @@ useEffect(() => {
     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-lg font-bold text-blue-500">
        <div className="text-blue-500">
                 <img
-            src="/src/assets/icon study.png"
+            src={iconStudyImg}
             alt="study illustration"
             />
     </div>
@@ -323,7 +332,7 @@ useEffect(() => {
     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-lg font-bold text-emerald-500">
        <div className="text-blue-500">
                 <img
-            src="/src/assets/icon hands on.png"
+            src={iconHandsOnImg}
             alt="study illustration"
             />
     </div>
@@ -344,7 +353,7 @@ useEffect(() => {
     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-50 text-lg font-bold text-amber-500">
       <div className="text-blue-500">
                 <img
-            src="/src/assets/icon share.png"
+            src={iconShareImg}
             alt="study illustration"
             />
     </div>
@@ -365,7 +374,7 @@ useEffect(() => {
     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-rose-50 text-lg font-bold text-rose-500">
       <div className="text-blue-500">
                 <img
-            src="/src/assets/know.png"
+            src={knowImg}
             alt="study illustration"
             />
     </div>
@@ -518,4 +527,4 @@ useEffect(() => {
   )
 }
 
-export default Overview 
+export default Overview
