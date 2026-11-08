@@ -58,6 +58,8 @@ Deployed using Vercel.
 
 Live Website: https://gdgoc-ten.vercel.app/
 ---
+Video Presentation: https://drive.google.com/drive/folders/1FAT18e8vvxlCupHCF0XemZRlGy_0TLMj
+---
 
 
 
