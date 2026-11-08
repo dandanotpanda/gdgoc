@@ -1,7 +1,16 @@
+import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import logo from '../assets/logo.png'
 
 function Navbar() {
+  const [navigation, setNavigation] = useState([])
+
+useEffect(() => {
+  fetch('https://gdgoc-ugm-api.vercel.app/api/navigation')
+    .then((res) => res.json())
+    .then((result) => setNavigation(result.data))
+    .catch((err) => console.error('Navigation error:', err))
+}, [])
   const navClass = ({ isActive }) =>
     `text-sm ${isActive ? 'text-blue-600 font-semibold' : 'text-gray-600 hover:text-blue-600'}`
 
@@ -13,21 +22,16 @@ function Navbar() {
         </a>
 
         <div className="hidden items-center gap-8 md:flex">
-          <NavLink to="/" end className={navClass}>
-            Home
-          </NavLink>
-
-          <NavLink to="/about" className={navClass}>
-            About
-          </NavLink>
-
-          <NavLink to="/overview" className={navClass}>
-            Overview
-          </NavLink>
-
-          <NavLink to="/contact" className={navClass}>
-            Contact
-          </NavLink>
+          {navigation.map((item) => (
+  <NavLink
+    key={item.href}
+    to={item.href}
+    end={item.href === "/"}
+    className={navClass}
+  >
+    {item.label}
+  </NavLink>
+))}
         </div>
 
         <NavLink

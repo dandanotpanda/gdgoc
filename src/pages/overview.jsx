@@ -1,4 +1,74 @@
+import { useEffect, useState } from "react";
 function Overview() {
+  const [tracks, setTracks] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+  const [formats, setFormats] = useState([]);
+  const [journey, setJourney] = useState([]);
+
+
+
+
+
+  useEffect(() => {
+    const fetchTracks = async () => {
+      try {
+        const response = await fetch(
+          "https://gdgoc-ugm-api.vercel.app/api/tracks"
+        );
+
+        const result = await response.json();
+
+        setTracks(result.data);
+        console.log("Data tracks:", result.data);
+      } catch (err) {
+        setError("Gagal mengambil data tracks");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchTracks();
+  }, []);
+  useEffect(() => {
+  const fetchFormats = async () => {
+    try {
+      const response = await fetch(
+        "https://gdgoc-ugm-api.vercel.app/api/formats"
+      );
+
+      const result = await response.json();
+
+      setFormats(result.data);
+
+      console.log("Data formats:", result.data);
+    } catch (err) {
+      setError("Gagal mengambil data formats");
+    }
+  };
+
+  fetchFormats();
+}, []);
+useEffect(() => {
+  const fetchJourney = async () => {
+    try {
+      const response = await fetch(
+        "https://gdgoc-ugm-api.vercel.app/api/journey"
+      );
+      const result = await response.json();
+      setJourney(result.data);
+      console.log("Data journey:", result.data);
+    } catch (err) {
+      setError("Gagal mengambil data journey");
+    }
+  };
+
+  fetchJourney();
+}, []);
+
+
+
+  
   return (
     <main className="bg-white text-gray-900">
 
@@ -82,15 +152,13 @@ function Overview() {
 
   <div className="relative z-0 flex flex-1 flex-col p-5">
     <p className="text-[10px] font-semibold uppercase text-blue-600">
-      EXPLORE THE WHY
+      {tracks[0]?.tagline}
     </p>
     <h3 className="mt-2 text-xl font-bold text-gray-900">
-      Research & discovery
+      {tracks[0]?.name}
     </h3>
     <p className="mt-3 text-sm leading-relaxed text-gray-500">
-      Ask better questions, understand people, and
-      <br className="hidden md:block" />
-      turn insight into a clear problem worth solving.
+      {tracks[0]?.description}
     </p>
     <div className="my-4 border-t border-gray-100" />
     <p className="text-xs text-gray-400">
@@ -114,15 +182,13 @@ function Overview() {
 
   <div className="relative z-0 flex flex-1 flex-col p-5">
     <p className="text-[10px] font-semibold uppercase text-amber-600">
-      MAKE IT MEANINGFUL
+      {tracks[1]?.tagline}
     </p>
     <h3 className="mt-2 text-xl font-bold text-gray-900">
-      Design & creativity
+      {tracks[1]?.name}
     </h3>
     <p className="mt-3 text-sm leading-relaxed text-gray-500">
-      Translate ideas into thoughtful experiences,
-      <br className="hidden md:block" />
-      from a first sketch to a prototype people can use.
+      {tracks[1]?.description}
     </p>
     <div className="my-4 border-t border-gray-100" />
     <p className="text-xs text-gray-400">
@@ -146,15 +212,13 @@ function Overview() {
 
   <div className="relative z-0 flex flex-1 flex-col p-5">
     <p className="text-[10px] font-semibold uppercase text-green-600">
-      BRING IDEAS TO LIFE
+      {tracks[2]?.tagline}
     </p>
     <h3 className="mt-2 text-xl font-bold text-gray-900">
-      Development
+      {tracks[2]?.name}
     </h3>
     <p className="mt-3 text-sm leading-relaxed text-gray-500">
-      Learn the tools, write the code, and build
-      <br className="hidden md:block" />
-      useful things with people who enjoy figuring it out.
+      {tracks[2]?.description}
     </p>
     <div className="my-4 border-t border-gray-100" />
     <p className="text-xs text-gray-400">
@@ -209,7 +273,9 @@ function Overview() {
         </p>
         </section>
       
+     
 
+            
       {/* LEARNING FORMATS */}
       <section id="formats" className="scroll-mt-16 bg-gray-100 px-6 py-20">
         <div className="mx-auto max-w-7xl">
@@ -242,10 +308,9 @@ function Overview() {
     </div>
     </div>
     <div>
-      <h3 className="text-lg font-bold">Study groups</h3>
+      <h3 className="text-lg font-bold"> {formats[0]?.name} </h3>
       <p className="mt-2 text-xs leading-relaxed text-gray-500">
-        Build foundations with peers. Work through a topic, compare
-        <br/> approaches, and make space for questions.
+       {formats[0]?.description}
       </p>
       <p className="mt-3 text-[10px] font-semibold text-blue-600">
         Best for · Learning the fundamentals
@@ -264,10 +329,9 @@ function Overview() {
     </div>
     </div>
     <div>
-      <h3 className="text-lg font-bold">Hands-on workshops</h3>
+      <h3 className="text-lg font-bold">{formats[2]?.name}</h3>
       <p className="mt-2 text-xs leading-relaxed text-gray-500">
-        Get introduced to a tool or method, follow a practical exercise, 
-        <br/>and take away something to keep exploring.
+        {formats[2]?.description}
       </p>
       <p className="mt-3 text-[10px] font-semibold text-blue-600">
         Best for · Trying something new
@@ -286,10 +350,9 @@ function Overview() {
     </div>
     </div>
     <div>
-      <h3 className="text-lg font-bold">Project circles</h3>
+      <h3 className="text-lg font-bold">{formats[1]?.name}</h3>
       <p className="mt-2 text-xs leading-relaxed text-gray-500">
-        Connect research, design, and development around a shared
-        <br/> problem. Learn through making and feedback.
+        {formats[1]?.description}
       </p>
       <p className="mt-3 text-[10px] font-semibold text-blue-600">
         Best for · Putting skills into practice
@@ -308,10 +371,9 @@ function Overview() {
     </div>
     </div>
     <div>
-      <h3 className="text-lg font-bold">Knowledge sharing</h3>
+      <h3 className="text-lg font-bold">{formats[3]?.name}</h3>
       <p className="mt-2 text-xs leading-relaxed text-gray-500">
-        Walk through an idea, share a lesson from your process, and 
-        <br/>discover how other students approach their work.
+        {formats[3]?.description}
       </p>
       <p className="mt-3 text-[10px] font-semibold text-blue-600">
         Best for · Exchanging perspectives
@@ -344,10 +406,9 @@ function Overview() {
     <p className="border-b border-gray-200 pb-4 text-3xl font-bold text-blue-600">
       01
     </p>
-    <h3 className="mt-5 text-lg font-bold">Discover</h3>
+    <h3 className="mt-5 text-lg font-bold">{journey[0]?.title}</h3>
     <p className="mt-3 text-xs leading-relaxed text-gray-500">
-      Explore a topic and find the questions 
-      <br/>you want to answer.
+      {journey[0]?.description}
     </p>
   </article>
 
@@ -356,10 +417,9 @@ function Overview() {
     <p className="border-b border-gray-200 pb-4 text-3xl font-bold text-blue-600">
       02
     </p>
-    <h3 className="mt-5 text-lg font-bold">Practice</h3>
+    <h3 className="mt-5 text-lg font-bold">{journey[1]?.title}</h3>
     <p className="mt-3 text-xs leading-relaxed text-gray-500">
-      Try an exercise, work through a 
-      <br/>challenge, and ask for help.
+      {journey[1]?.description}
     </p>
   </article>
 
@@ -368,10 +428,9 @@ function Overview() {
     <p className="border-b border-gray-200 pb-4 text-3xl font-bold text-blue-600">
       03
     </p>
-    <h3 className="mt-5 text-lg font-bold">Build</h3>
+    <h3 className="mt-5 text-lg font-bold">{journey[2]?.title}</h3>
     <p className="mt-3 text-xs leading-relaxed text-gray-500">
-      Apply your learning to a small idea with 
-      <br/>a clear purpose.
+     {journey[2]?.description} 
     </p>
   </article>
 
@@ -380,10 +439,9 @@ function Overview() {
     <p className="border-b border-gray-200 pb-4 text-3xl font-bold text-blue-600">
       04
     </p>
-    <h3 className="mt-5 text-lg font-bold">Share</h3>
+    <h3 className="mt-5 text-lg font-bold">{journey[3]?.title}</h3>
     <p className="mt-3 text-xs leading-relaxed text-gray-500">
-      Show your process, gather feedback,
-      <br/> and help someone else.
+      {journey[3]?.description}
     </p>
   </article>
 
@@ -421,7 +479,7 @@ function Overview() {
           </div>
         </div>
       </section>
-
+      
       {/* CTA */}
       <section className="px-6 py-16">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 rounded-3xl bg-blue-50 p-8 md:flex-row md:items-center md:p-12">
@@ -460,4 +518,4 @@ function Overview() {
   )
 }
 
-export default Overview
+export default Overview 

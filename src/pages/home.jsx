@@ -1,4 +1,45 @@
+import { useEffect, useState } from "react";
+import heroImg from "../assets/hero.png";
+import researchImg from "../assets/research.png";
+import designImg from "../assets/design.png";
+import developmentImg from "../assets/development.png";
+import iconStudyImg from "../assets/icon study.png";
+import iconHandsOnImg from "../assets/icon hands on.png";
+import iconShareImg from "../assets/icon share.png";
+import panahImg from "../assets/panah.png";
+
 function Home() {
+    const [faqs, setFaqs] = useState([]);
+    const [loadingFaqs, setLoadingFaqs] = useState(true);
+    const [tracks, setTracks] = useState([]);
+    const [formats, setFormats] = useState([]);
+    const [journey, setJourney] = useState([]);
+
+  useEffect(() => {
+    fetch("https://gdgoc-ugm-api.vercel.app/api/faqs")
+      .then((res) => res.json())
+      .then((result) => setFaqs(result.data))
+      .catch((err) => console.error("FAQ error:", err))
+      .finally(() => setLoadingFaqs(false));
+  }, []);
+  useEffect(() => {
+  fetch("https://gdgoc-ugm-api.vercel.app/api/tracks")
+    .then((res) => res.json())
+    .then((result) => setTracks(result.data))
+    .catch((err) => console.error("Tracks error:", err));
+}, []);
+useEffect(() => {
+  fetch("https://gdgoc-ugm-api.vercel.app/api/formats")
+    .then((res) => res.json())
+    .then((result) => setFormats(result.data))
+    .catch((err) => console.error("Formats error:", err));
+}, []);
+useEffect(() => {
+  fetch("https://gdgoc-ugm-api.vercel.app/api/journey")
+    .then((res) => res.json())
+    .then((result) => setJourney(result.data))
+    .catch((err) => console.error("Journey error:", err));
+}, []);
   return (
     <>
       {/* Hero Section */}
@@ -56,7 +97,7 @@ function Home() {
         {/* Hero Image */}
         <div className="flex justify-center md:-translate-x-[80px]">
           <img
-            src="src/assets/hero.png"
+            src={heroImg}
             alt="GDGoC UGM illustration"
             className="h-auto w-full max-w-[620px] rounded-2xl object-contain"
           />
@@ -175,7 +216,7 @@ function Home() {
 <div className="flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white">
   <div className="relative z-10 aspect-[400/232] w-full shrink-0 rounded-t-2xl bg-blue-50">
     <img
-      src="/src/assets/research.png"
+      src={researchImg}
       alt="Research and discovery"
       className="absolute left-0 top-0 z-20 h-auto w-full object-contain"
     />
@@ -183,15 +224,13 @@ function Home() {
 
   <div className="relative z-0 flex flex-1 flex-col p-5">
     <p className="text-[10px] font-semibold uppercase text-blue-600">
-      EXPLORE THE WHY
+      {tracks[0]?.tagline}
     </p>
     <h3 className="mt-2 text-xl font-bold text-gray-900">
-      Research & discovery
+      {tracks[0]?.name}
     </h3>
     <p className="mt-3 text-sm leading-relaxed text-gray-500">
-      Ask better questions, understand people, and
-      <br className="hidden md:block" />
-      turn insight into a clear problem worth solving.
+      {tracks[0]?.description}
     </p>
     <div className="my-4 border-t border-gray-100" />
     <p className="text-xs text-gray-400">
@@ -207,7 +246,7 @@ function Home() {
 <div className="flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white">
   <div className="relative z-10 aspect-[400/232] w-full shrink-0 rounded-t-2xl bg-amber-50">
     <img
-      src="/src/assets/design.png"
+      src={designImg}
       alt="Design and creativity"
       className="absolute left-0 top-0 z-20 h-auto w-full object-contain"
     />
@@ -215,15 +254,13 @@ function Home() {
 
   <div className="relative z-0 flex flex-1 flex-col p-5">
     <p className="text-[10px] font-semibold uppercase text-amber-600">
-      MAKE IT MEANINGFUL
+      {tracks[1]?.tagline}
     </p>
     <h3 className="mt-2 text-xl font-bold text-gray-900">
-      Design & creativity
+      {tracks[1]?.name}
     </h3>
     <p className="mt-3 text-sm leading-relaxed text-gray-500">
-      Translate ideas into thoughtful experiences,
-      <br className="hidden md:block" />
-      from a first sketch to a prototype people can use.
+      {tracks[1]?.description}
     </p>
     <div className="my-4 border-t border-gray-100" />
     <p className="text-xs text-gray-400">
@@ -239,7 +276,7 @@ function Home() {
 <div className="flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white">
   <div className="relative z-10 aspect-[400/232] w-full shrink-0 rounded-t-2xl bg-green-50">
     <img
-      src="/src/assets/development.png"
+      src={developmentImg}
       alt="Development"
       className="absolute left-0 top-0 z-20 h-auto w-full object-contain"
     />
@@ -247,15 +284,13 @@ function Home() {
 
   <div className="relative z-0 flex flex-1 flex-col p-5">
     <p className="text-[10px] font-semibold uppercase text-green-600">
-      BRING IDEAS TO LIFE
+      {tracks[2]?.tagline}
     </p>
     <h3 className="mt-2 text-xl font-bold text-gray-900">
-      Development
+      {tracks[2]?.name}
     </h3>
     <p className="mt-3 text-sm leading-relaxed text-gray-500">
-      Learn the tools, write the code, and build
-      <br className="hidden md:block" />
-      useful things with people who enjoy figuring it out.
+      {tracks[2]?.description}
     </p>
     <div className="my-4 border-t border-gray-100" />
     <p className="text-xs text-gray-400">
@@ -296,21 +331,17 @@ function Home() {
             <div className="rounded-2xl bg-white p-7">
               <div className="mb-5 text-blue-500">
                 <img
-            src="/src/assets/icon study.png"
+            src={iconStudyImg}
             alt="study illustration"
             />
               </div>
 
               <h3 className="text-xl font-bold text-gray-900">
-                Study together
+                {formats[0]?.name}
               </h3>
 
               <p className="mt-3 text-sm leading-relaxed text-gray-500">
-                Work through foundations in peer learning 
-                <br />
-                sessions. Bring your
-                questions; leave with a 
-                <br/>next step.
+                {formats[0]?.description}
               </p>
               <div className="my-4 border-t border-gray-200"/>
 
@@ -326,19 +357,17 @@ function Home() {
             <div className="rounded-2xl bg-white p-7">
               <div className="mb-5 text-blue-500">
                 <img
-            src="/src/assets/icon hands on.png"
+            src={iconHandsOnImg}
             alt="icon illustration"
             />
               </div>
 
               <h3 className="text-xl font-bold text-gray-900">
-                Try it hands-on
+                {formats[2]?.name}
               </h3>
 
               <p className="mt-4 text-sm leading-relaxed text-gray-500">
-                Practice a tool or technique in a workshop, 
-                <br/>then put it to work
-                in a small experiment.
+                {formats[2]?.description}
               </p>
 <div className="my-4 border-t border-gray-200"/>
               
@@ -354,19 +383,17 @@ function Home() {
             <div className="rounded-2xl bg-white p-7">
               <div className="mb-5 text-blue-500">
                  <img
-            src="/src/assets/icon share.png"
+            src={iconShareImg}
             alt="share illustration"
             />
               </div>
 
               <h3 className="text-xl font-bold text-gray-900">
-                Share the process
+              {formats[1]?.name}
               </h3>
 
               <p className="mt-3 text-sm leading-relaxed text-gray-500">
-                Exchange feedback, explain your decisions,
-                <br/> and learn from
-                different ways of thinking.
+                {formats[1]?.description}
               </p>
 <div className="my-4 border-t border-gray-200"/>
               
@@ -489,12 +516,11 @@ function Home() {
             <div className="my-4 border-t border-gray-200" />
 
             <h3 className="text-lg font-bold text-gray-900">
-              Follow your curiosity
+              {journey[0]?.title}
             </h3>
 
             <p className="mt-3 text-sm leading-relaxed text-gray-500">
-              Explore the tracks and find a topic you want to 
-              <br/>understand better.
+              {journey[0]?.description}
             </p>
           </div>
 
@@ -505,13 +531,11 @@ function Home() {
             <div className="my-4 border-t border-gray-200" />
 
             <h3 className="text-lg font-bold text-gray-900">
-              Learn alongside others
+              {journey[1]?.title}
             </h3>
 
             <p className="mt-3 text-sm leading-relaxed text-gray-500">
-              Join a learning opportunity, ask a question, and share 
-              <br/>your
-              perspective.
+              {journey[1]?.description}
             </p>
           </div>
 
@@ -522,13 +546,12 @@ function Home() {
             <div className="my-4 border-t border-gray-200" />
 
             <h3 className="text-lg font-bold text-gray-900">
-              Turn learning into action
+              {journey[2]?.title}n
             </h3>
 
             <p className="mt-3 text-sm leading-relaxed text-gray-500">
-              Practice through a project, exchange feedback, and 
-              <br/>pass something
-              on.
+              {journey[2]?.description}
+              
             </p>
           </div>
         </div>
@@ -585,57 +608,35 @@ function Home() {
         </div>
 
         {/* FAQ Questions */}
-        <div className="space-y-5 md:col-span-2">
-          <details className="group border-b border-gray-200 pb-5" open>
-            <summary className="flex cursor-pointer list-none items-center justify-between text-base font-semibold text-gray-900">
-              Do I need to know how to code?
-             <img 
-             src="/src/assets/arrow.png"
-             alt="arrow"
-             className="h-4 w-4 text-blue-600 transition-transform duration-300 group-open:rotate-180"/>
-            </summary>
+        
+        {/* FAQ Questions */}
+<div className="space-y-5 md:col-span-2">
+  {loadingFaqs ? (
+    <p className="text-sm text-gray-500">Loading FAQs...</p>
+  ) : (
+    faqs.map((faq, index) => (
+    <details
+      key={faq.id || index}
+      className="group border-b border-gray-200 pb-5"
+      open={index === 0}
+    >
+      <summary className="flex cursor-pointer list-none items-center justify-between text-base font-semibold text-gray-900">
+        {faq.question}
 
-            <p className="mt-3 text-sm leading-relaxed text-gray-500">
-              No. Start with an interest in technology and a willingness to
-              learn. Research and design are part of the 
-              <br/>journey, too.
-            </p>
-          </details>
+        <img
+          src={panahImg}
+          alt="arrow"
+          className="h-4 w-4 text-blue-600 transition-transform duration-300 group-open:rotate-180"
+        />
+      </summary>
 
-          <details className="group border-b border-gray-200 pb-5">
-            <summary className="flex cursor-pointer list-none items-center justify-between text-base font-semibold text-gray-900">
-              Is this only for computer science students?
-             <img 
-             src="/src/assets/arrow.png"
-             alt="arrow"
-             className="h-4 w-4 text-blue-600 transition-transform duration-300 group-open:rotate-180"/>
-            </summary>
-
-            <p className="mt-3 text-sm leading-relaxed text-gray-500">
-              Different disciplines bring different perspectives. Explore the
-              overview to find a starting point that fits 
-              <br/>your interests.
-            </p>
-          </details>
-
-          <details className="group border-b border-gray-200 pb-5">
-            <summary className="flex cursor-pointer list-none items-center justify-between text-base font-semibold text-gray-900">
-              How can I find learning opportunities?
-              <img 
-             src="/src/assets/arrow.png"
-             alt="arrow"
-             className="h-4 w-4 text-blue-600 transition-transform duration-300 group-open:rotate-180"/>
-            </summary>
-
-            <p className="mt-3 text-sm leading-relaxed text-gray-500">
-              Keep an eye on @gdgoc.ugm for community updates. You can also use
-              the contact page to ask about 
-              <br/>getting involved.
-            </p>
-          </details>
-        </div>
-      </section>
-
+      <p className="mt-3 text-sm leading-relaxed text-gray-500">
+        {faq.answer}
+      </p>
+    </details>
+  )))}
+</div>
+</section>
       {/* Final CTA Section */}
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="flex flex-col justify-between gap-8 rounded-3xl bg-blue-50 p-8 md:flex-row md:items-center md:p-12">
