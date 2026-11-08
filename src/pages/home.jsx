@@ -6,24 +6,23 @@ function Home() {
         {/* Hero Text */}
         <div className="flex w-full max-w-[780px] flex-col gap-4 -translate-y-[72px]">
           <div className="flex items-center gap-2">
-  <span className="h-1 w-1 rounded-full bg-blue-500"></span>
+            <span className="h-1 w-1 rounded-full bg-blue-500"></span>
 
-  <p className="text-[10px] font-medium tracking-wide text-gray-500">
-    GDGOC UGM • 2026/2027
-  </p>
-</div>
+            <p className="text-[10px] font-medium tracking-wide text-gray-500">
+              GDGOC UGM • 2026/2027
+            </p>
+          </div>
           <h1 className="text-[40px] font-bold leading-[105%] tracking-[-0.03em] text-gray-900 md:text-[80px]">
             Big ideas.
             <br />
             <span className="text-blue-600">Built together.</span>
           </h1>
-       <p className="max-w-[500px] text-base leading-[24px] text-gray-600">
-  A place for curious minds at{" "}
-  <strong>Universitas Gadjah Mada</strong> to learn,
-  connect, and build technology that matters.
-</p>
+          <p className="max-w-[500px] text-base leading-[24px] text-gray-600">
+            A place for curious minds at{" "}
+            <strong>Universitas Gadjah Mada</strong> to learn, connect, and
+            build technology that matters.
+          </p>
 
-          
           <div className="flex flex-wrap gap-3">
             <a
               href="/overview"
@@ -40,33 +39,32 @@ function Home() {
             </a>
           </div>
           {/* Hero Tagline */}
-<div className="flex items-center gap-2">
-  <div className="flex items-center gap-[3px]">
-    <span className="h-2 w-2 rounded-full bg-red-500"></span>
-    <span className="h-2 w-2 rounded-full bg-yellow-500"></span>
-    <span className="h-2 w-2 rounded-full bg-green-500"></span>
-    <span className="h-2 w-2 rounded-full bg-blue-500"></span>
-  </div>
+          <div className="flex items-center gap-2">
+            <div className="flex items-center gap-[3px]">
+              <span className="h-2 w-2 rounded-full bg-red-500"></span>
+              <span className="h-2 w-2 rounded-full bg-yellow-500"></span>
+              <span className="h-2 w-2 rounded-full bg-green-500"></span>
+              <span className="h-2 w-2 rounded-full bg-blue-500"></span>
+            </div>
 
-  <p className="text-xs text-gray-500">
-    Different backgrounds. A shared curiosity.
-  </p>
-</div>
+            <p className="text-xs text-gray-500">
+              Different backgrounds. A shared curiosity.
+            </p>
           </div>
-    
+        </div>
 
         {/* Hero Image */}
         <div className="flex justify-center md:-translate-x-[80px]">
-  <img
-    src="/src/assets/hero.png"
-    alt="GDGoC UGM illustration"
-    className="h-auto w-full max-w-[620px] rounded-2xl object-contain"
-  />
-</div>
+          <img
+            src="src/assets/hero.png"
+            alt="GDGoC UGM illustration"
+            className="h-auto w-full max-w-[620px] rounded-2xl object-contain"
+          />
+        </div>
       </section>
 
       {/* Feature Strip */}
-     <section className="-mt-48 border-y border-gray-200">
+      <section className="-mt-48 border-y border-gray-200">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 px-6 py-5 text-sm font-medium md:flex-row">
           <p>
             <span className="mr-2 text-blue-500">■</span>
@@ -89,13 +87,12 @@ function Home() {
       <section className="mx-auto grid max-w-7xl gap-10 px-6 py-20 md:grid-cols-2 md:gap-20">
         <div>
           <div className="flex items-center gap-2">
-  <span className="h-1 w-1 rounded-full bg-blue-500"></span>
+            <span className="h-1 w-1 rounded-full bg-blue-500"></span>
 
-  <p className="text-[10px] font-medium tracking-wide text-gray-500">
-    A CAMPUS. A COMMUNITY.
-  </p>
-</div>
-          
+            <p className="text-[10px] font-medium tracking-wide text-gray-500">
+              A CAMPUS. A COMMUNITY.
+            </p>
+          </div>
 
           <h2 className="text-3xl font-bold leading-tight text-gray-900 md:text-4xl">
             Not just learning
@@ -114,14 +111,15 @@ function Home() {
         </div>
 
         <div className="space-y-5 text-gray-600">
-         <p className="max-w-[540px] text-[17px] leading-[25px] text-gray-600">
-  Google Developer Groups on Campus, Universitas Gadjah Mada
-  <br className="hidden md:block" />
-  brings students together around one simple idea: we can go{" "}
-  <strong className="font-semibold">further</strong>
-  <br className="hidden md:block" />
-  when we <strong className="font-semibold">learn</strong> with each other.
-</p>
+          <p className="max-w-[540px] text-[17px] leading-[25px] text-gray-600">
+            Google Developer Groups on Campus, Universitas Gadjah Mada
+            <br className="hidden md:block" />
+            brings students together around one simple idea: we can go{" "}
+            <strong className="font-semibold">further</strong>
+            <br className="hidden md:block" />
+            when we <strong className="font-semibold">learn</strong> with each
+            other.
+          </p>
 
           <p className="leading-relaxed">
             From your first line of code to your next product idea, there's room
@@ -142,11 +140,7 @@ function Home() {
         </div>
       </section>
 
-      
-      
-     
-    
-{/* Learning Tracks Section */}
+      {/* Learning Tracks Section */}
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="flex items-center gap-2">
           <span className="h-1 w-1 rounded-full bg-blue-500"></span>
@@ -168,24 +162,26 @@ function Home() {
             </p>
           </div>
 
-          <a href="/overview" className="text-sm font-medium text-blue-600 hover:underline">
+          <a
+            href="/overview"
+            className="text-sm font-medium text-blue-600 hover:underline"
+          >
             See the overview →
           </a>
         </div>
 
         <div className="mt-12 grid gap-5 md:grid-cols-3">
-
-          {/* Research Card */}
-<div className="relative rounded-2xl border border-gray-200 bg-white">
-  <div className="relative h-56 w-full overflow-hidden rounded-t-2xl">
+           {/* Research Card */}
+<div className="flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white">
+  <div className="relative z-10 aspect-[400/232] w-full shrink-0 rounded-t-2xl bg-blue-50">
     <img
       src="/src/assets/research.png"
       alt="Research and discovery"
-      className="absolute inset-0 h-full w-full object-cover scale-[1.35] object-center"
+      className="absolute left-0 top-0 z-20 h-auto w-full object-contain"
     />
   </div>
 
-  <div className="relative z-10 p-5">
+  <div className="relative z-0 flex flex-1 flex-col p-5">
     <p className="text-[10px] font-semibold uppercase text-blue-600">
       EXPLORE THE WHY
     </p>
@@ -208,16 +204,16 @@ function Home() {
 </div>
 
 {/* Design Card */}
-<div className="relative rounded-2xl border border-gray-200 bg-white">
-  <div className="relative h-56 w-full overflow-hidden rounded-t-2xl">
+<div className="flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white">
+  <div className="relative z-10 aspect-[400/232] w-full shrink-0 rounded-t-2xl bg-amber-50">
     <img
       src="/src/assets/design.png"
       alt="Design and creativity"
-      className="absolute inset-0 h-full w-full object-cover scale-[1.35] object-center"
+      className="absolute left-0 top-0 z-20 h-auto w-full object-contain"
     />
   </div>
 
-  <div className="relative z-10 p-5">
+  <div className="relative z-0 flex flex-1 flex-col p-5">
     <p className="text-[10px] font-semibold uppercase text-amber-600">
       MAKE IT MEANINGFUL
     </p>
@@ -240,16 +236,16 @@ function Home() {
 </div>
 
 {/* Development Card */}
-<div className="relative rounded-2xl border border-gray-200 bg-white">
-  <div className="relative h-56 w-full overflow-hidden rounded-t-2xl">
+<div className="flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white">
+  <div className="relative z-10 aspect-[400/232] w-full shrink-0 rounded-t-2xl bg-green-50">
     <img
       src="/src/assets/development.png"
       alt="Development"
-      className="absolute inset-0 h-full w-full object-cover scale-[1.35] object-center"
+      className="absolute left-0 top-0 z-20 h-auto w-full object-contain"
     />
   </div>
 
-  <div className="relative z-10 p-5">
+  <div className="relative z-0 flex flex-1 flex-col p-5">
     <p className="text-[10px] font-semibold uppercase text-green-600">
       BRING IDEAS TO LIFE
     </p>
@@ -278,10 +274,13 @@ function Home() {
       <section className="bg-gray-100 py-20">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-10">
-            <p className="text-xs font-semibold uppercase tracking-wider text-blue-600">
-              MORE THAN A CLASSROOM
-            </p>
+            <div className="mb-10 flex items-center gap-2">
+  <span className="inline-block h-1 w-1 rounded-full bg-blue-500"></span>
 
+  <p className="text-[10px] font-medium tracking-wide text-gray-500">
+    MORE THAN A CLASSROOM
+  </p>
+</div>
             <h2 className="mt-3 text-3xl font-bold text-gray-900 md:text-4xl">
               Less watching. More making.
             </h2>
@@ -296,7 +295,10 @@ function Home() {
             {/* Card 1 */}
             <div className="rounded-2xl bg-white p-7">
               <div className="mb-5 text-blue-500">
-                <span className="text-xl">▣</span>
+                <img
+            src="/src/assets/icon study.png"
+            alt="study illustration"
+            />
               </div>
 
               <h3 className="text-xl font-bold text-gray-900">
@@ -304,9 +306,13 @@ function Home() {
               </h3>
 
               <p className="mt-3 text-sm leading-relaxed text-gray-500">
-                Work through foundations in peer learning sessions. Bring your
-                questions; leave with a next step.
+                Work through foundations in peer learning 
+                <br />
+                sessions. Bring your
+                questions; leave with a 
+                <br/>next step.
               </p>
+              <div className="my-4 border-t border-gray-200"/>
 
               <a
                 href="/overview"
@@ -319,18 +325,23 @@ function Home() {
             {/* Card 2 */}
             <div className="rounded-2xl bg-white p-7">
               <div className="mb-5 text-blue-500">
-                <span className="text-xl">‹ ›</span>
+                <img
+            src="/src/assets/icon hands on.png"
+            alt="icon illustration"
+            />
               </div>
 
               <h3 className="text-xl font-bold text-gray-900">
                 Try it hands-on
               </h3>
 
-              <p className="mt-3 text-sm leading-relaxed text-gray-500">
-                Practice a tool or technique in a workshop, then put it to work
+              <p className="mt-4 text-sm leading-relaxed text-gray-500">
+                Practice a tool or technique in a workshop, 
+                <br/>then put it to work
                 in a small experiment.
               </p>
-
+<div className="my-4 border-t border-gray-200"/>
+              
               <a
                 href="/overview"
                 className="mt-5 inline-block text-xs font-medium text-blue-600"
@@ -342,7 +353,10 @@ function Home() {
             {/* Card 3 */}
             <div className="rounded-2xl bg-white p-7">
               <div className="mb-5 text-blue-500">
-                <span className="text-xl">♧</span>
+                 <img
+            src="/src/assets/icon share.png"
+            alt="share illustration"
+            />
               </div>
 
               <h3 className="text-xl font-bold text-gray-900">
@@ -350,10 +364,12 @@ function Home() {
               </h3>
 
               <p className="mt-3 text-sm leading-relaxed text-gray-500">
-                Exchange feedback, explain your decisions, and learn from
+                Exchange feedback, explain your decisions,
+                <br/> and learn from
                 different ways of thinking.
               </p>
-
+<div className="my-4 border-t border-gray-200"/>
+              
               <a
                 href="/overview"
                 className="mt-5 inline-block text-xs font-medium text-blue-600"
@@ -389,10 +405,10 @@ function Home() {
             </h3>
 
             <div className="mt-5 grid grid-cols-3 gap-2">
-              <div className="rounded-md bg-blue-50 p-3 text-xs font-semibold text-gray-700">
+              <div className="rounded-md bg-[#EAF2FF] p-3 text-xs font-semibold text-gray-700">
                 Discover
               </div>
-              <div className="rounded-md bg-blue-50 p-3 text-xs font-semibold text-gray-700">
+              <div className="rounded-md bg-[#EAF5ED] p-3 text-xs font-semibold text-gray-700">
                 Connect
               </div>
               <div className="rounded-md bg-red-50 p-3 text-xs font-semibold text-gray-700">
@@ -412,23 +428,32 @@ function Home() {
 
         {/* Project Description */}
         <div>
-          <p className="text-xs font-semibold uppercase tracking-wider text-blue-600">
-            BUILD SOMETHING THAT MATTERS
-          </p>
+           <div className="flex items-center gap-2">
+  <span className="inline-block h-1 w-1 rounded-full bg-blue-500"></span>
 
+  <p className="text-[10px] font-medium tracking-wide text-gray-500">
+    BUILD SOMETHING THAT MATTERS
+  </p>
+</div>
+
+          
           <h2 className="mt-4 text-3xl font-bold leading-tight text-gray-900 md:text-4xl">
-            Your next project could start on campus.
+            Your next project could 
+            <br/>start on campus.
           </h2>
 
           <p className="mt-5 leading-relaxed text-gray-500">
             What if finding a study partner, sharing resources, or navigating
-            campus felt easier? Small, familiar problems can be the beginning of
-            meaningful work.
+            campus 
+            <br/>felt easier? Small, familiar problems can be the beginning of
+            meaningful 
+            <br/>work.
           </p>
 
           <p className="mt-4 leading-relaxed text-gray-500">
             Bring research, design, and development together. Try an idea, get
-            feedback, and make the next version better.
+            feedback, and 
+            <br/>make the next version better.
           </p>
 
           <a
@@ -443,9 +468,13 @@ function Home() {
       {/* Learning Journey Section */}
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="mb-10">
-          <p className="text-xs font-semibold uppercase tracking-wider text-blue-600">
-            MAKE YOUR FIRST MOVE
-          </p>
+          <p className="flex items-center text-[10px] font-medium tracking-wide text-gray-500">
+  <span className="mr-2 inline-block h-1 w-1 rounded-full bg-blue-500"></span>
+  MAKE YOUR FIRST MOVE
+</p>
+        
+          
+         
 
           <h2 className="mt-3 max-w-xl text-3xl font-bold leading-tight text-gray-900 md:text-4xl">
             You don’t need to have it all figured out.
@@ -464,7 +493,8 @@ function Home() {
             </h3>
 
             <p className="mt-3 text-sm leading-relaxed text-gray-500">
-              Explore the tracks and find a topic you want to understand better.
+              Explore the tracks and find a topic you want to 
+              <br/>understand better.
             </p>
           </div>
 
@@ -479,7 +509,8 @@ function Home() {
             </h3>
 
             <p className="mt-3 text-sm leading-relaxed text-gray-500">
-              Join a learning opportunity, ask a question, and share your
+              Join a learning opportunity, ask a question, and share 
+              <br/>your
               perspective.
             </p>
           </div>
@@ -495,7 +526,8 @@ function Home() {
             </h3>
 
             <p className="mt-3 text-sm leading-relaxed text-gray-500">
-              Practice through a project, exchange feedback, and pass something
+              Practice through a project, exchange feedback, and 
+              <br/>pass something
               on.
             </p>
           </div>
@@ -528,9 +560,13 @@ function Home() {
       <section className="mx-auto grid max-w-7xl gap-10 px-6 py-20 md:grid-cols-3">
         {/* FAQ Heading */}
         <div>
-          <p className="text-xs font-semibold uppercase tracking-wider text-blue-600">
-            A FEW GOOD QUESTIONS
-          </p>
+          <div className="flex items-center">
+  <span className="mr-2 inline-block h-1 w-1 rounded-full bg-blue-500"></span>
+  <p className="text-[10px] font-medium tracking-wide text-gray-500">
+    A FEW GOOD QUESTIONS
+  </p>
+</div>
+        
 
           <h2 className="mt-3 text-3xl font-bold leading-tight text-gray-900 md:text-4xl">
             Wondering
@@ -553,42 +589,48 @@ function Home() {
           <details className="group border-b border-gray-200 pb-5" open>
             <summary className="flex cursor-pointer list-none items-center justify-between text-base font-semibold text-gray-900">
               Do I need to know how to code?
-              <span className="text-blue-600 transition-transform group-open:rotate-180">
-                ⌄
-              </span>
+             <img 
+             src="/src/assets/arrow.png"
+             alt="arrow"
+             className="h-4 w-4 text-blue-600 transition-transform duration-300 group-open:rotate-180"/>
             </summary>
 
             <p className="mt-3 text-sm leading-relaxed text-gray-500">
               No. Start with an interest in technology and a willingness to
-              learn. Research and design are part of the journey, too.
+              learn. Research and design are part of the 
+              <br/>journey, too.
             </p>
           </details>
 
           <details className="group border-b border-gray-200 pb-5">
             <summary className="flex cursor-pointer list-none items-center justify-between text-base font-semibold text-gray-900">
               Is this only for computer science students?
-              <span className="text-blue-600 transition-transform group-open:rotate-180">
-                ⌄
-              </span>
+             <img 
+             src="/src/assets/arrow.png"
+             alt="arrow"
+             className="h-4 w-4 text-blue-600 transition-transform duration-300 group-open:rotate-180"/>
             </summary>
 
             <p className="mt-3 text-sm leading-relaxed text-gray-500">
               Different disciplines bring different perspectives. Explore the
-              overview to find a starting point that fits your interests.
+              overview to find a starting point that fits 
+              <br/>your interests.
             </p>
           </details>
 
           <details className="group border-b border-gray-200 pb-5">
             <summary className="flex cursor-pointer list-none items-center justify-between text-base font-semibold text-gray-900">
               How can I find learning opportunities?
-              <span className="text-blue-600 transition-transform group-open:rotate-180">
-                ⌄
-              </span>
+              <img 
+             src="/src/assets/arrow.png"
+             alt="arrow"
+             className="h-4 w-4 text-blue-600 transition-transform duration-300 group-open:rotate-180"/>
             </summary>
 
             <p className="mt-3 text-sm leading-relaxed text-gray-500">
               Keep an eye on @gdgoc.ugm for community updates. You can also use
-              the contact page to ask about getting involved.
+              the contact page to ask about 
+              <br/>getting involved.
             </p>
           </details>
         </div>
@@ -598,9 +640,11 @@ function Home() {
       <section className="mx-auto max-w-7xl px-6 py-16">
         <div className="flex flex-col justify-between gap-8 rounded-3xl bg-blue-50 p-8 md:flex-row md:items-center md:p-12">
           <div>
-            <p className="text-xs font-semibold uppercase tracking-wider text-blue-600">
-              YOUR NEXT CHAPTER
-            </p>
+            <p className="flex items-center text-[10px] font-medium tracking-wide text-gray-500">
+  <span className="mr-2 inline-block h-1 w-1 rounded-full bg-blue-500"></span>
+  YOUR NEXT CHAPTER
+</p>
+          
 
             <h2 className="mt-3 text-3xl font-bold leading-tight text-gray-900 md:text-4xl">
               Bring your curiosity.
@@ -632,90 +676,10 @@ function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-100">
-        <div className="mx-auto max-w-7xl px-6 py-12">
-          <div className="grid gap-10 md:grid-cols-3">
-            {/* Brand */}
-            <div>
-              <p className="mt-5 max-w-xs text-sm leading-relaxed text-gray-500">
-                A student community for curious minds, shared learning, and
-                technology with purpose.
-              </p>
-            </div>
-
-            {/* Explore */}
-            <div>
-              <h4 className="text-sm font-bold text-gray-900">Explore</h4>
-
-              <div className="mt-4 flex flex-col gap-3 text-sm text-gray-500">
-                <a href="/" className="hover:text-blue-600">
-                  Home
-                </a>
-                <a href="/about" className="hover:text-blue-600">
-                  About
-                </a>
-                <a href="/overview" className="hover:text-blue-600">
-                  Overview
-                </a>
-                <a href="/contact" className="hover:text-blue-600">
-                  Contact
-                </a>
-              </div>
-            </div>
-
-            {/* Social Media */}
-            <div>
-              <h4 className="text-sm font-bold text-gray-900">
-                Keep in the loop
-              </h4>
-
-              <a
-                href="https://www.instagram.com/gdgoc.ugm/"
-                target="_blank"
-                rel="noreferrer"
-                className="mt-4 inline-block text-sm text-blue-600 hover:underline"
-              >
-                @gdgoc.ugm
-              </a>
-
-              <div className="mt-4 flex gap-4 text-sm text-gray-500">
-                <a
-                  href="https://www.instagram.com/gdgoc.ugm/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Instagram
-                </a>
-                <a
-                  href="https://www.youtube.com/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  YouTube
-                </a>
-              </div>
-
-              <p className="mt-4 text-xs text-gray-400">
-                Learn together. Build together.
-              </p>
-            </div>
-          </div>
-
-          {/* Copyright */}
-          <div className="mt-12 flex flex-col justify-between gap-3 border-t border-gray-200 pt-6 text-xs text-gray-400 md:flex-row">
-            <p>© GDGoC Universitas Gadjah Mada · 2026/2027</p>
-            <p>Made for the campus. Open to possibilities.</p>
-          </div>
-
-          <div className="mt-6 flex gap-1">
-            <span className="h-1 w-8 bg-blue-500"></span>
-            <span className="h-1 w-8 bg-red-500"></span>
-            <span className="h-1 w-8 bg-yellow-400"></span>
-            <span className="h-1 w-8 bg-green-500"></span>
-          </div>
-        </div>
-      </footer>
+      
+             
+         
+        
     </>
   );
 }

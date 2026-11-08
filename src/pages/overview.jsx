@@ -59,11 +59,16 @@ function Overview() {
     <main className="bg-white text-gray-900">
 
       {/* HERO */}
-      <section className="mx-auto grid max-w-7xl items-center gap-8 px-6 py-12 md:grid-cols-[1.5fr_0.8fr] md:py-16">
+      <section className="mx-auto grid max-w-7xl items-center gap-8 px-6 py-3 md:grid-cols-[1.5fr_0.8fr] md:py-5">
         <div>
-          <p className="mb-5 text-[10px] font-semibold uppercase tracking-wider text-blue-600">
-            ● OVERVIEW · PROGRAMS & LEARNING TRACKS
-          </p>
+           <div className="flex items-center">
+  <span className="mr-2 inline-block h-1 w-1 rounded-full bg-blue-500"></span>
+  <p className="text-[10px] font-medium tracking-wide text-gray-500">
+    OVERVIEW · PROGRAMS & LEARNING TRACKS
+  </p>
+</div>
+          
+         
 
           <h1 className="text-4xl font-bold leading-tight tracking-tight md:text-6xl">
             Find your spark.
@@ -73,16 +78,22 @@ function Overview() {
 
           <p className="mt-6 max-w-2xl text-sm leading-relaxed text-gray-500">
             Explore how research, creativity, and development connect.
-            Start with one interest. Grow through practice and the
+            Start with one interest. Grow through 
+            <br/>practice and the
             people around you.
           </p>
         </div>
 
-        <div className="flex justify-center">
-          <div className="flex h-52 w-52 items-center justify-center rounded-3xl bg-blue-100 text-8xl text-blue-500 shadow-xl shadow-blue-100 md:h-64 md:w-64">
-            ⌕
-          </div>
-        </div>
+      <div className="flex justify-center">
+
+    <img
+      src="src/assets/overview.png"
+            alt="GDGoC UGM illustration"
+            className="h-auto w-full max-w-[620px] rounded-2xl object-contain"
+    />
+  </div>
+
+        
       </section>
 
       {/* SECTION NAVIGATION */}
@@ -97,12 +108,15 @@ function Overview() {
 
       {/* LEARNING TRACKS */}
       <section id="tracks" className="scroll-mt-16 mx-auto max-w-7xl px-6 py-16 md:py-20">
-        <p className="text-[10px] font-semibold uppercase tracking-wider text-blue-600">
-          ● EXPLORE YOUR INTERESTS
-        </p>
-
-        <h2 className="mt-5 max-w-2xl text-3xl font-bold tracking-tight md:text-4xl">
-          Three ways in. Plenty of ways forward.
+           <div className="flex items-center">
+  <span className="mr-2 inline-block h-1 w-1 rounded-full bg-blue-500"></span>
+  <p className="text-[10px] font-medium tracking-wide text-gray-500">
+  EXPLORE YOUR INTERESTS
+  </p>
+        </div>
+        <h2 className="mt-5 max-w-2xl text-4xl font-bold tracking-tight md:text-5xl">
+          Three ways in. Plenty of ways 
+          <br/>forward.
         </h2>
 
         <p className="mt-4 text-sm text-gray-500">
@@ -112,100 +126,104 @@ function Overview() {
        
 <div className="mt-10 grid gap-5 md:grid-cols-3">
 
-  {/* Research Card */}
-  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white">
-    <div className="flex h-44 items-center justify-center bg-blue-50">
-      <span className="text-7xl">⌕</span>
-    </div>
-
-    <div className="p-5">
-      <p className="text-[10px] font-semibold uppercase text-blue-600">
-        EXPLORE THE WHY
-      </p>
-
-      <h3 className="mt-2 text-xl font-bold text-gray-900">
-        Research & discovery
-      </h3>
-
-      <p className="mt-3 text-sm leading-relaxed text-gray-500">
-        Ask better questions, understand people, and turn insight into a clear problem worth solving.
-      </p>
-
-      <div className="my-4 border-t border-gray-100" />
-
-      <p className="text-xs text-gray-400">
-        Problem framing · User research · Product thinking
-      </p>
-
-      <a href="#formats" className="mt-4 inline-block text-sm font-medium text-blue-600">
-        Explore this track →
-      </a>
-    </div>
+   {/* Research Card */}
+<div className="flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white">
+  <div className="relative z-10 aspect-[400/232] w-full shrink-0 rounded-t-2xl bg-blue-50">
+    <img
+      src="/src/assets/research.png"
+      alt="Research and discovery"
+      className="absolute left-0 top-0 z-20 h-auto w-full object-contain"
+    />
   </div>
 
-  {/* Design Card */}
-  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white">
-    <div className="flex h-44 items-center justify-center bg-amber-50">
-      <span className="text-7xl">✎</span>
-    </div>
-
-    <div className="p-5">
-      <p className="text-[10px] font-semibold uppercase text-amber-600">
-        MAKE IT MEANINGFUL
-      </p>
-
-      <h3 className="mt-2 text-xl font-bold text-gray-900">
-        Design & creativity
-      </h3>
-
-      <p className="mt-3 text-sm leading-relaxed text-gray-500">
-        Translate ideas into thoughtful experiences, from a first sketch to a prototype people can use.
-      </p>
-
-      <div className="my-4 border-t border-gray-100" />
-
-      <p className="text-xs text-gray-400">
-        UI/UX · Visual storytelling · Prototyping
-      </p>
-
-      <a href="#formats" className="mt-4 inline-block text-sm font-medium text-blue-600">
-        Explore this track →
-      </a>
-    </div>
+  <div className="relative z-0 flex flex-1 flex-col p-5">
+    <p className="text-[10px] font-semibold uppercase text-blue-600">
+      EXPLORE THE WHY
+    </p>
+    <h3 className="mt-2 text-xl font-bold text-gray-900">
+      Research & discovery
+    </h3>
+    <p className="mt-3 text-sm leading-relaxed text-gray-500">
+      Ask better questions, understand people, and
+      <br className="hidden md:block" />
+      turn insight into a clear problem worth solving.
+    </p>
+    <div className="my-4 border-t border-gray-100" />
+    <p className="text-xs text-gray-400">
+      Problem framing · User research · Product thinking
+    </p>
+    <a href="/overview" className="mt-4 inline-block text-sm font-medium text-blue-600">
+      Explore this track →
+    </a>
   </div>
-
-  {/* Development Card */}
-  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white">
-    <div className="flex h-44 items-center justify-center bg-green-50">
-      <span className="text-7xl">⌘</span>
-    </div>
-
-    <div className="p-5">
-      <p className="text-[10px] font-semibold uppercase text-green-600">
-        BRING IDEAS TO LIFE
-      </p>
-
-      <h3 className="mt-2 text-xl font-bold text-gray-900">
-        Development
-      </h3>
-
-      <p className="mt-3 text-sm leading-relaxed text-gray-500">
-        Learn the tools, write the code, and build useful things with people who enjoy figuring it out.
-      </p>
-
-      <div className="my-4 border-t border-gray-100" />
-
-      <p className="text-xs text-gray-400">
-        Web & mobile · Cloud · AI foundations
-      </p>
-
-      <a href="#formats" className="mt-4 inline-block text-sm font-medium text-blue-600">
-        Explore this track →
-      </a>
-    </div>
-  </div>
-
 </div>
+
+{/* Design Card */}
+<div className="flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white">
+  <div className="relative z-10 aspect-[400/232] w-full shrink-0 rounded-t-2xl bg-amber-50">
+    <img
+      src="/src/assets/design.png"
+      alt="Design and creativity"
+      className="absolute left-0 top-0 z-20 h-auto w-full object-contain"
+    />
+  </div>
+
+  <div className="relative z-0 flex flex-1 flex-col p-5">
+    <p className="text-[10px] font-semibold uppercase text-amber-600">
+      MAKE IT MEANINGFUL
+    </p>
+    <h3 className="mt-2 text-xl font-bold text-gray-900">
+      Design & creativity
+    </h3>
+    <p className="mt-3 text-sm leading-relaxed text-gray-500">
+      Translate ideas into thoughtful experiences,
+      <br className="hidden md:block" />
+      from a first sketch to a prototype people can use.
+    </p>
+    <div className="my-4 border-t border-gray-100" />
+    <p className="text-xs text-gray-400">
+      UI/UX · Visual storytelling · Prototyping
+    </p>
+    <a href="/overview" className="mt-4 inline-block text-sm font-medium text-blue-600">
+      Explore this track →
+    </a>
+  </div>
+</div>
+
+{/* Development Card */}
+<div className="flex flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white">
+  <div className="relative z-10 aspect-[400/232] w-full shrink-0 rounded-t-2xl bg-green-50">
+    <img
+      src="/src/assets/development.png"
+      alt="Development"
+      className="absolute left-0 top-0 z-20 h-auto w-full object-contain"
+    />
+  </div>
+
+  <div className="relative z-0 flex flex-1 flex-col p-5">
+    <p className="text-[10px] font-semibold uppercase text-green-600">
+      BRING IDEAS TO LIFE
+    </p>
+    <h3 className="mt-2 text-xl font-bold text-gray-900">
+      Development
+    </h3>
+    <p className="mt-3 text-sm leading-relaxed text-gray-500">
+      Learn the tools, write the code, and build
+      <br className="hidden md:block" />
+      useful things with people who enjoy figuring it out.
+    </p>
+    <div className="my-4 border-t border-gray-100" />
+    <p className="text-xs text-gray-400">
+      Web & mobile · Cloud · AI foundations
+    </p>
+    <a href="/overview" className="mt-4 inline-block text-sm font-medium text-blue-600">
+      Explore this track →
+    </a>
+  </div>
+</div>
+
+        </div>
+      
 
 
         {/* PATHWAY TABLE */}
@@ -245,17 +263,22 @@ function Overview() {
         <p className="mt-4 text-[10px] text-gray-400">
           Illustrative learning outcomes. Topics and opportunities are shared through community updates.
         </p>
-      </section>
+        </section>
+      
 
       {/* LEARNING FORMATS */}
       <section id="formats" className="scroll-mt-16 bg-gray-100 px-6 py-20">
         <div className="mx-auto max-w-7xl">
-          <p className="text-[10px] font-semibold uppercase tracking-wider text-blue-600">
-            ● WAYS TO LEARN
-          </p>
-
+           <div className="flex items-center">
+  <span className="mr-2 inline-block h-1 w-1 rounded-full bg-blue-500"></span>
+  <p className="text-[10px] font-medium tracking-wide text-gray-500">
+    WAYS TO LEARN
+  </p>
+</div>
+          
           <h2 className="mt-5 max-w-2xl text-3xl font-bold tracking-tight md:text-4xl">
-            The format changes. The curiosity stays.
+            The format changes. The curiosity 
+            <br/>stays.
           </h2>
 
           <p className="mt-4 text-sm text-gray-500">
@@ -267,12 +290,18 @@ function Overview() {
   {/* Study Groups */}
   <article className="flex gap-5 rounded-2xl bg-white p-6">
     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-lg font-bold text-blue-500">
-      ▣
+       <div className="text-blue-500">
+                <img
+            src="/src/assets/icon study.png"
+            alt="study illustration"
+            />
+    </div>
     </div>
     <div>
       <h3 className="text-lg font-bold">Study groups</h3>
       <p className="mt-2 text-xs leading-relaxed text-gray-500">
-        Build foundations with peers. Work through a topic, compare approaches, and make space for questions.
+        Build foundations with peers. Work through a topic, compare
+        <br/> approaches, and make space for questions.
       </p>
       <p className="mt-3 text-[10px] font-semibold text-blue-600">
         Best for · Learning the fundamentals
@@ -283,12 +312,18 @@ function Overview() {
   {/* Hands-on Workshops */}
   <article className="flex gap-5 rounded-2xl bg-white p-6">
     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-lg font-bold text-emerald-500">
-      ‹ ›
+       <div className="text-blue-500">
+                <img
+            src="/src/assets/icon hands on.png"
+            alt="study illustration"
+            />
+    </div>
     </div>
     <div>
       <h3 className="text-lg font-bold">Hands-on workshops</h3>
       <p className="mt-2 text-xs leading-relaxed text-gray-500">
-        Get introduced to a tool or method, follow a practical exercise, and take away something to keep exploring.
+        Get introduced to a tool or method, follow a practical exercise, 
+        <br/>and take away something to keep exploring.
       </p>
       <p className="mt-3 text-[10px] font-semibold text-blue-600">
         Best for · Trying something new
@@ -299,12 +334,18 @@ function Overview() {
   {/* Project Circles */}
   <article className="flex gap-5 rounded-2xl bg-white p-6">
     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-50 text-lg font-bold text-amber-500">
-      ♧
+      <div className="text-blue-500">
+                <img
+            src="/src/assets/icon share.png"
+            alt="study illustration"
+            />
+    </div>
     </div>
     <div>
       <h3 className="text-lg font-bold">Project circles</h3>
       <p className="mt-2 text-xs leading-relaxed text-gray-500">
-        Connect research, design, and development around a shared problem. Learn through making and feedback.
+        Connect research, design, and development around a shared
+        <br/> problem. Learn through making and feedback.
       </p>
       <p className="mt-3 text-[10px] font-semibold text-blue-600">
         Best for · Putting skills into practice
@@ -315,12 +356,18 @@ function Overview() {
   {/* Knowledge Sharing */}
   <article className="flex gap-5 rounded-2xl bg-white p-6">
     <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-rose-50 text-lg font-bold text-rose-500">
-      ♧
+      <div className="text-blue-500">
+                <img
+            src="/src/assets/know.png"
+            alt="study illustration"
+            />
+    </div>
     </div>
     <div>
       <h3 className="text-lg font-bold">Knowledge sharing</h3>
       <p className="mt-2 text-xs leading-relaxed text-gray-500">
-        Walk through an idea, share a lesson from your process, and discover how other students approach their work.
+        Walk through an idea, share a lesson from your process, and 
+        <br/>discover how other students approach their work.
       </p>
       <p className="mt-3 text-[10px] font-semibold text-blue-600">
         Best for · Exchanging perspectives
@@ -334,9 +381,13 @@ function Overview() {
 
       {/* JOURNEY */}
       <section id="journey" className="scroll-mt-16 mx-auto max-w-7xl px-6 py-20">
-        <p className="text-[10px] font-semibold uppercase tracking-wider text-blue-600">
-          ● PROGRESS, NOT PERFECTION
-        </p>
+         <div className="flex items-center">
+  <span className="mr-2 inline-block h-1 w-1 rounded-full bg-blue-500"></span>
+  <p className="text-[10px] font-medium tracking-wide text-gray-500">
+    PROGRESS, NOT PERFECTION
+  </p>
+</div>
+       
 
         <h2 className="mt-5 text-3xl font-bold md:text-4xl">
           A journey you can keep building on.
@@ -351,7 +402,8 @@ function Overview() {
     </p>
     <h3 className="mt-5 text-lg font-bold">Discover</h3>
     <p className="mt-3 text-xs leading-relaxed text-gray-500">
-      Explore a topic and find the questions you want to answer.
+      Explore a topic and find the questions 
+      <br/>you want to answer.
     </p>
   </article>
 
@@ -362,7 +414,8 @@ function Overview() {
     </p>
     <h3 className="mt-5 text-lg font-bold">Practice</h3>
     <p className="mt-3 text-xs leading-relaxed text-gray-500">
-      Try an exercise, work through a challenge, and ask for help.
+      Try an exercise, work through a 
+      <br/>challenge, and ask for help.
     </p>
   </article>
 
@@ -373,7 +426,8 @@ function Overview() {
     </p>
     <h3 className="mt-5 text-lg font-bold">Build</h3>
     <p className="mt-3 text-xs leading-relaxed text-gray-500">
-      Apply your learning to a small idea with a clear purpose.
+      Apply your learning to a small idea with 
+      <br/>a clear purpose.
     </p>
   </article>
 
@@ -384,7 +438,8 @@ function Overview() {
     </p>
     <h3 className="mt-5 text-lg font-bold">Share</h3>
     <p className="mt-3 text-xs leading-relaxed text-gray-500">
-      Show your process, gather feedback, and help someone else.
+      Show your process, gather feedback,
+      <br/> and help someone else.
     </p>
   </article>
 
@@ -395,20 +450,25 @@ function Overview() {
       <section id="starting" className="scroll-mt-16 bg-amber-50 px-6 py-12">
         <div className="mx-auto grid max-w-7xl gap-6 md:grid-cols-[0.8fr_1.2fr] md:items-center">
           <div>
-            <p className="text-[10px] font-semibold uppercase tracking-wider text-blue-600">
-              ● START WHERE YOU ARE
-            </p>
+            <div className="flex items-center">
+  <span className="mr-2 inline-block h-1 w-1 rounded-full bg-blue-500"></span>
+  <p className="text-[10px] font-medium tracking-wide text-gray-500">
+    START WHERE YOU ARE
+  </p>
+</div>
             <h2 className="mt-4 text-2xl font-bold">
               New to tech?
               <br />
-              That's a starting point, too.
+              That's a starting point,
+              <br/> too.
             </h2>
           </div>
 
           <div>
             <p className="text-sm leading-relaxed text-gray-600">
               You don't need a finished portfolio or the perfect track choice.
-              Pick a topic you're curious about. If you're unsure, tell us
+              Pick a topic you're curious
+              <br/> about. If you're unsure, tell us
               what interests you and we can start a conversation.
             </p>
             <a href="/contact" className="mt-4 inline-block text-xs font-semibold text-blue-600">
@@ -422,9 +482,13 @@ function Overview() {
       <section className="px-6 py-16">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-8 rounded-3xl bg-blue-50 p-8 md:flex-row md:items-center md:p-12">
           <div>
-            <p className="text-[10px] font-semibold uppercase tracking-wider text-blue-600">
-              ● YOUR NEXT CHAPTER
-            </p>
+            <div className="flex items-center">
+  <span className="mr-2 inline-block h-1 w-1 rounded-full bg-blue-500"></span>
+  <p className="text-[10px] font-medium tracking-wide text-gray-500">
+    YOUR NEXT CHAPTER
+  </p>
+</div> 
+           
             <h2 className="mt-4 text-3xl font-bold">
               Bring your curiosity.
               <br />
@@ -446,41 +510,8 @@ function Overview() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="bg-gray-100 px-6 py-12">
-        <div className="mx-auto grid max-w-7xl gap-10 md:grid-cols-3">
-          <div>
-            <h3 className="font-bold">Google Developer Groups</h3>
-            <p className="mt-1 text-[10px] text-blue-600">On Campus · Universitas Gadjah Mada</p>
-            <p className="mt-5 max-w-xs text-xs leading-relaxed text-gray-500">
-              A student community for curious minds, shared learning, and technology with purpose.
-            </p>
-          </div>
-
-          <div>
-            <h3 className="text-xs font-bold">Explore</h3>
-            <div className="mt-4 flex flex-col gap-3 text-xs text-gray-500">
-              <a href="/">Home</a>
-              <a href="/about">About</a>
-              <a href="/overview">Overview</a>
-              <a href="/contact">Contact</a>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-xs font-bold">Keep in the loop</h3>
-            <a href="https://instagram.com" className="mt-4 inline-block text-xs text-blue-600">
-              @gdgoc.ugm
-            </a>
-            <p className="mt-4 text-xs text-gray-500">Learn together. Build together.</p>
-          </div>
-        </div>
-
-        <div className="mx-auto mt-10 flex max-w-7xl justify-between border-t border-gray-200 pt-5 text-[10px] text-gray-400">
-          <span>© GDGoC Universitas Gadjah Mada</span>
-          <span>Made for the campus. Open to possibilities.</span>
-        </div>
-      </footer>
+    
+       
     </main>
   )
 }
