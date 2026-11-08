@@ -1,16 +1,64 @@
-# React + Vite
+# GDGoC UGM Frontend Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About
+A frontend website developed for the GDGoC UGM Frontend assignment. Built to present the community, learning tracks, learning activities, and other information through a responsive web interface.
 
-Currently, two official plugins are available:
+## Built With
+* React
+* Vite
+* Tailwind CSS
+* React Router DOM
+* REST API
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Pages
+* **Home** – Displays learning tracks, learning experiences, FAQs, and community information.
+* **Overview** – Displays community statistics and learning information.
 
-## React Compiler
+## API Integration
+This project uses the GDGoC UGM REST API.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Base URL: `https://gdgoc-ugm-api.vercel.app/api`
 
-## Expanding the ESLint configuration
+Integrated endpoints include:
+* `/navigation`
+* `/faqs`
+* `/tracks`
+* `/formats`
+* `/journey`
+* `/stats`
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+Clone the repository: https://github.com/dandanotpanda/gdgoc.git
+
+```bash
+git clone YOUR_GITHUB_REPOSITORY_URL
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+Build the project:
+
+```bash
+npm run build
+```
+
+## Deployment
+Deployed using Vercel.
+
+Live Website: https://gdgoc-ten.vercel.app/
+
+
+
+Developed for the GDGoC UGM Frontend Assignment.
+
