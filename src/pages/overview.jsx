@@ -1,38 +1,4 @@
-const tracks = [
-  {
-    number: '01',
-    eyebrow: 'EXPLORE THE WHY',
-    title: 'Research & discovery',
-    description: 'Ask better questions, understand people, and turn insight into a clear problem worth solving.',
-    tags: 'Problem framing · User research · Product thinking',
-    symbol: '⌕',
-    color: 'blue',
-    bg: 'bg-blue-50',
-    accent: 'text-blue-500',
-  },
-  {
-    number: '02',
-    eyebrow: 'MAKE IT MEANINGFUL',
-    title: 'Design & creativity',
-    description: 'Translate ideas into thoughtful experiences, from a first sketch to a prototype people can use.',
-    tags: 'UI/UX · Visual storytelling · Prototyping',
-    symbol: '✎',
-    color: 'yellow',
-    bg: 'bg-amber-50',
-    accent: 'text-amber-500',
-  },
-  {
-    number: '03',
-    eyebrow: 'BRING IDEAS TO LIFE',
-    title: 'Development',
-    description: 'Learn the tools, write the code, and build useful things with people who enjoy figuring it out.',
-    tags: 'Web & mobile · Cloud · AI foundations',
-    symbol: '</>',
-    color: 'green',
-    bg: 'bg-emerald-50',
-    accent: 'text-emerald-500',
-  },
-]
+
 
 const formats = [
   {
@@ -143,36 +109,104 @@ function Overview() {
           These pathways are starting points, not boxes. Follow one deeply or bring different skills together.
         </p>
 
-        <div className="mt-10 grid gap-5 md:grid-cols-3">
-          {tracks.map((track) => (
-            <article key={track.number} className="overflow-hidden rounded-2xl border border-gray-200 bg-white">
-              <div className={`flex h-40 items-center justify-center ${track.bg}`}>
-                <span className={`text-8xl font-light ${track.accent}`}>
-                  {track.symbol}
-                </span>
-              </div>
+       
+<div className="mt-10 grid gap-5 md:grid-cols-3">
 
-              <div className="p-5">
-                <p className="text-[9px] font-semibold uppercase text-blue-600">
-                  {track.eyebrow}
-                </p>
+  {/* Research Card */}
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white">
+    <div className="flex h-44 items-center justify-center bg-blue-50">
+      <span className="text-7xl">⌕</span>
+    </div>
 
-                <h3 className="mt-3 text-xl font-bold">{track.title}</h3>
+    <div className="p-5">
+      <p className="text-[10px] font-semibold uppercase text-blue-600">
+        EXPLORE THE WHY
+      </p>
 
-                <p className="mt-3 min-h-16 text-xs leading-relaxed text-gray-500">
-                  {track.description}
-                </p>
+      <h3 className="mt-2 text-xl font-bold text-gray-900">
+        Research & discovery
+      </h3>
 
-                <div className="mt-4 border-t border-gray-100 pt-4">
-                  <p className="text-[10px] text-gray-400">{track.tags}</p>
-                  <a href="#formats" className="mt-4 inline-block text-xs font-semibold text-blue-600">
-                    Explore this track →
-                  </a>
-                </div>
-              </div>
-            </article>
-          ))}
-        </div>
+      <p className="mt-3 text-sm leading-relaxed text-gray-500">
+        Ask better questions, understand people, and turn insight into a clear problem worth solving.
+      </p>
+
+      <div className="my-4 border-t border-gray-100" />
+
+      <p className="text-xs text-gray-400">
+        Problem framing · User research · Product thinking
+      </p>
+
+      <a href="#formats" className="mt-4 inline-block text-sm font-medium text-blue-600">
+        Explore this track →
+      </a>
+    </div>
+  </div>
+
+  {/* Design Card */}
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white">
+    <div className="flex h-44 items-center justify-center bg-amber-50">
+      <span className="text-7xl">✎</span>
+    </div>
+
+    <div className="p-5">
+      <p className="text-[10px] font-semibold uppercase text-amber-600">
+        MAKE IT MEANINGFUL
+      </p>
+
+      <h3 className="mt-2 text-xl font-bold text-gray-900">
+        Design & creativity
+      </h3>
+
+      <p className="mt-3 text-sm leading-relaxed text-gray-500">
+        Translate ideas into thoughtful experiences, from a first sketch to a prototype people can use.
+      </p>
+
+      <div className="my-4 border-t border-gray-100" />
+
+      <p className="text-xs text-gray-400">
+        UI/UX · Visual storytelling · Prototyping
+      </p>
+
+      <a href="#formats" className="mt-4 inline-block text-sm font-medium text-blue-600">
+        Explore this track →
+      </a>
+    </div>
+  </div>
+
+  {/* Development Card */}
+  <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white">
+    <div className="flex h-44 items-center justify-center bg-green-50">
+      <span className="text-7xl">⌘</span>
+    </div>
+
+    <div className="p-5">
+      <p className="text-[10px] font-semibold uppercase text-green-600">
+        BRING IDEAS TO LIFE
+      </p>
+
+      <h3 className="mt-2 text-xl font-bold text-gray-900">
+        Development
+      </h3>
+
+      <p className="mt-3 text-sm leading-relaxed text-gray-500">
+        Learn the tools, write the code, and build useful things with people who enjoy figuring it out.
+      </p>
+
+      <div className="my-4 border-t border-gray-100" />
+
+      <p className="text-xs text-gray-400">
+        Web & mobile · Cloud · AI foundations
+      </p>
+
+      <a href="#formats" className="mt-4 inline-block text-sm font-medium text-blue-600">
+        Explore this track →
+      </a>
+    </div>
+  </div>
+
+</div>
+
 
         {/* PATHWAY TABLE */}
         <h3 className="mt-14 text-xl font-bold">
@@ -228,25 +262,73 @@ function Overview() {
             Explore the kinds of experiences that help you move from understanding to doing.
           </p>
 
-          <div className="mt-10 grid gap-5 md:grid-cols-2">
-            {formats.map((format) => (
-              <article key={format.title} className="flex gap-5 rounded-2xl bg-white p-6">
-                <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl text-lg font-bold ${format.color}`}>
-                  {format.icon}
-                </div>
+         <div className="mt-10 grid gap-5 md:grid-cols-2">
 
-                <div>
-                  <h3 className="text-lg font-bold">{format.title}</h3>
-                  <p className="mt-2 text-xs leading-relaxed text-gray-500">
-                    {format.description}
-                  </p>
-                  <p className="mt-3 text-[10px] font-semibold text-blue-600">
-                    Best for · {format.best}
-                  </p>
-                </div>
-              </article>
-            ))}
-          </div>
+  {/* Study Groups */}
+  <article className="flex gap-5 rounded-2xl bg-white p-6">
+    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-lg font-bold text-blue-500">
+      ▣
+    </div>
+    <div>
+      <h3 className="text-lg font-bold">Study groups</h3>
+      <p className="mt-2 text-xs leading-relaxed text-gray-500">
+        Build foundations with peers. Work through a topic, compare approaches, and make space for questions.
+      </p>
+      <p className="mt-3 text-[10px] font-semibold text-blue-600">
+        Best for · Learning the fundamentals
+      </p>
+    </div>
+  </article>
+
+  {/* Hands-on Workshops */}
+  <article className="flex gap-5 rounded-2xl bg-white p-6">
+    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-lg font-bold text-emerald-500">
+      ‹ ›
+    </div>
+    <div>
+      <h3 className="text-lg font-bold">Hands-on workshops</h3>
+      <p className="mt-2 text-xs leading-relaxed text-gray-500">
+        Get introduced to a tool or method, follow a practical exercise, and take away something to keep exploring.
+      </p>
+      <p className="mt-3 text-[10px] font-semibold text-blue-600">
+        Best for · Trying something new
+      </p>
+    </div>
+  </article>
+
+  {/* Project Circles */}
+  <article className="flex gap-5 rounded-2xl bg-white p-6">
+    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-amber-50 text-lg font-bold text-amber-500">
+      ♧
+    </div>
+    <div>
+      <h3 className="text-lg font-bold">Project circles</h3>
+      <p className="mt-2 text-xs leading-relaxed text-gray-500">
+        Connect research, design, and development around a shared problem. Learn through making and feedback.
+      </p>
+      <p className="mt-3 text-[10px] font-semibold text-blue-600">
+        Best for · Putting skills into practice
+      </p>
+    </div>
+  </article>
+
+  {/* Knowledge Sharing */}
+  <article className="flex gap-5 rounded-2xl bg-white p-6">
+    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-rose-50 text-lg font-bold text-rose-500">
+      ♧
+    </div>
+    <div>
+      <h3 className="text-lg font-bold">Knowledge sharing</h3>
+      <p className="mt-2 text-xs leading-relaxed text-gray-500">
+        Walk through an idea, share a lesson from your process, and discover how other students approach their work.
+      </p>
+      <p className="mt-3 text-[10px] font-semibold text-blue-600">
+        Best for · Exchanging perspectives
+      </p>
+    </div>
+  </article>
+
+</div>
         </div>
       </section>
 
@@ -260,19 +342,53 @@ function Overview() {
           A journey you can keep building on.
         </h2>
 
-        <div className="mt-12 grid gap-8 sm:grid-cols-2 md:grid-cols-4">
-          {journey.map((step) => (
-            <article key={step.number}>
-              <p className="border-b border-gray-200 pb-4 text-3xl font-bold text-blue-600">
-                {step.number}
-              </p>
-              <h3 className="mt-5 text-lg font-bold">{step.title}</h3>
-              <p className="mt-3 text-xs leading-relaxed text-gray-500">
-                {step.description}
-              </p>
-            </article>
-          ))}
-        </div>
+       <div className="mt-12 grid gap-8 sm:grid-cols-2 md:grid-cols-4">
+
+  {/* Discover */}
+  <article>
+    <p className="border-b border-gray-200 pb-4 text-3xl font-bold text-blue-600">
+      01
+    </p>
+    <h3 className="mt-5 text-lg font-bold">Discover</h3>
+    <p className="mt-3 text-xs leading-relaxed text-gray-500">
+      Explore a topic and find the questions you want to answer.
+    </p>
+  </article>
+
+  {/* Practice */}
+  <article>
+    <p className="border-b border-gray-200 pb-4 text-3xl font-bold text-blue-600">
+      02
+    </p>
+    <h3 className="mt-5 text-lg font-bold">Practice</h3>
+    <p className="mt-3 text-xs leading-relaxed text-gray-500">
+      Try an exercise, work through a challenge, and ask for help.
+    </p>
+  </article>
+
+  {/* Build */}
+  <article>
+    <p className="border-b border-gray-200 pb-4 text-3xl font-bold text-blue-600">
+      03
+    </p>
+    <h3 className="mt-5 text-lg font-bold">Build</h3>
+    <p className="mt-3 text-xs leading-relaxed text-gray-500">
+      Apply your learning to a small idea with a clear purpose.
+    </p>
+  </article>
+
+  {/* Share */}
+  <article>
+    <p className="border-b border-gray-200 pb-4 text-3xl font-bold text-blue-600">
+      04
+    </p>
+    <h3 className="mt-5 text-lg font-bold">Share</h3>
+    <p className="mt-3 text-xs leading-relaxed text-gray-500">
+      Show your process, gather feedback, and help someone else.
+    </p>
+  </article>
+
+</div>
       </section>
 
       {/* STARTING POINT */}
